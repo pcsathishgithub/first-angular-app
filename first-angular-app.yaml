@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: firstappangular-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: firstappangular
+  template:
+    metadata:
+      labels:
+        app: firstappangular
+    spec:
+      containers:
+      - name: firstappangular-container
+        image: docker pull pcsathish1/first-angular-app:1.0
+        ports:
+        - containerPort: 80
