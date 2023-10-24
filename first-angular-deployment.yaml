@@ -5,7 +5,7 @@ metadata:
   labels:
     app: firstangular-app 
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: firstangular-app
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: firstappangular-container
-        image: pcsathish1/first-angular-app:2.0
+        image: pcsathish1/first-angular-app:3.0
         ports:
         - containerPort: 80
