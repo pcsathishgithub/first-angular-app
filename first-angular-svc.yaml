@@ -1,10 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: first-angular-service
+  name: firstangular-service
+  labels:
+    app: firstangular-app
 spec:
+  type: LoadBalancer
   selector:
-    app.kubernetes.io/name: firstappangular
+    app: firstangular-app
   ports:
     - protocol: TCP
       port: 80
