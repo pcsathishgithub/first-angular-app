@@ -6,7 +6,7 @@ import { HousingLocation } from './housinglocation';
 })
 export class HousingService {
 
-  url = 'http://api/locations ';
+  url = 'api/locations';
 
   async getAllHousingLocations(): Promise<HousingLocation[]> {
     const data = await fetch(this.url);
@@ -14,6 +14,7 @@ export class HousingService {
   }
 
   async getHousingLocationById(id: number): Promise<HousingLocation | undefined> {
+    console.log(URL + `${this.url}/${id}`);
     const data = await fetch(`${this.url}/${id}`);
     return await data.json() ?? {};
   }
