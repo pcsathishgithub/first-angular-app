@@ -7,7 +7,7 @@ import { LogService } from './shared/log.service';
 })
 export class HousingService {
 
-  url = 'api/locations';
+   url = 'api/locations';
   //url = 'http://localhost:8080/locations';
 
   logger: LogService = inject(LogService);
